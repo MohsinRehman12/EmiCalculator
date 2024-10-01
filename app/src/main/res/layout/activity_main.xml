@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dynamic_neutral_variant90"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        />
+
+    <EditText
+        android:id="@+id/MortgageTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint=" $ Enter Mortgage"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/RateTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint=" % Enter Interest Rate"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MortgageTextNumber"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/PeriodTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint=" Enter Years"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.337"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/RateTextNumber"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mortgageHeader"
+        android:layout_width="127dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="41dp"
+        android:text="Mortgage/Principal"
+        app:layout_constraintBottom_toTopOf="@+id/MortgageTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/MortgageTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/interestHeader"
+        android:layout_width="154dp"
+        android:layout_height="22dp"
+
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="1dp"
+        android:text="Enter your Interest rate"
+        app:layout_constraintBottom_toTopOf="@+id/RateTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/RateTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/MortgageTextNumber"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/yearsHeader"
+        android:layout_width="222dp"
+        android:layout_height="18dp"
+
+        android:layout_marginTop="53dp"
+
+        android:text="Enter your Mortgage Period "
+        app:layout_constraintBottom_toTopOf="@+id/PeriodTextNumber"
+        app:layout_constraintStart_toStartOf="@+id/PeriodTextNumber"
+        app:layout_constraintTop_toBottomOf="@+id/RateTextNumber"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Calculate"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PeriodTextNumber"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/NavbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EMI Calculator"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
